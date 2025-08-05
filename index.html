@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="BTstyle.css">
+  <script src="BT.js" defer></script>
+  <script src="https://kit.fontawesome.com/7c8a5c9cb8.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  <section class="main">
+    <main>
+    <div>
+      <h3 style="text-align: left; margin-left: 0.7em;margin-bottom: 0.5em;">Welcome, <span id="span_name">user</span></h3>
+    </div>
+    <div class="container">
+    <div class="maindash">
+      <h4>Available Balance</h4>
+      <h2 class="display_balance">₦0.00</h2>
+      <button >Deposit</button> <button >Withdraw</button>
+     <div class="trans_summary"> <span id="total_in">IN: ₦0.00</span> <span id="total_out">OUT: ₦0.00 </span> </div>
+    </div>
+
+    <div class="Services" >Buy Airtime</div>
+    <div class="Services" >Purchase Data</div>
+    <div class="Services" >Bills and Utility</div>
+    <div class="Services" >Products and Services</div>
+    <div class="Services" >School and Exams</div>
+    <div class="Services" >Shopping</div>
+
+    </div>
+
+   
+  </main>
+  <aside>
+    <h3>Transaction History</h3>
+    <div class="transaction">
+     
+      <p>You don't have any transactions yet</p>
+      <p>Click on deposit to add funds to your balance</p>
+      
+    </div>
+    <button onclick="" id="logout">
+      Log Out
+    </button>
+  </aside>
+  
+  </section>
+  <div class="modal login_modal">
+      <div class="login">
+          <p>Budget planner by______</p>
+
+          <h3>Login</h3>
+
+          <label for="name">Name</label>
+          <input type="text" name="" id="welcome_name">
+          <label for="name">Starting Balance</label>
+          <input type="text" name="" id="stbal">
+
+          <button id="login_button">Login</button>
+      </div>
+  </div>
+  <div class="modal deposit_modal">
+      <div class="deposit">
+          <p>Budget planner by______</p>
+
+          <h3>Deposit</h3>
+
+          <label for="name">Amount</label>
+          <input type="number" name="" id="deposit">
+          <label for="name">Narration</label>
+          <input type="text" name="" id="">
+
+          <button>Deposit</button>
+      </div>
+  </div>
+  <div class="modal withdraw_modal">
+      <div class="withdraw">
+          <p>Budget planner by______</p>
+
+          <h3>Withdrawal </h3>
+
+          <label for="name">Amount</label>
+          <input type="number" name="" id="withdraw">
+          <label for="name">Narration</label>
+          <input type="text" name="" id="">
+
+          <button>Withdraw</button>
+      </div>
+  </div>
+  <div class="modal airtime_modal">
+      <div class="buyAirtime">
+          <p>Budget planner by______</p>
+
+          <h3>Buy Airtime</h3>
+
+          <label for="name">Phone Number</label>
+          <input type="tel" name="" id="withdraw">
+          <label for="network"> Network  </label> 
+            <select name="border" id="">
+              <option value="MTN">MTN</option>
+              <option value="Glo">Glo</option>
+              <option value="Airtel">Airtel</option>
+              <option value="9mobile">9mobile</option>
+            </select>
+         
+          <label for="name">Amount</label>
+          <input type="number" name="" id="buyairtime">
+        
+
+          <button>Buy Airtime</button>
+      </div>
+  </div>
+  <div class="modal data_modal">
+    <div class="purchaseData">
+       
+      <h3>Purchase Data</h3>
+
+      <label for="name">Phone Number</label>
+      <input type="tel" name="" id="withdraw">
+      <label for="network"> Network  </label> 
+        <select name="border" id="">
+          <option value="MTN">MTN</option>
+          <option value="Glo">Glo</option>
+          <option value="Airtel">Airtel</option>
+          <option value="9mobile">9mobile</option>
+        </select>
+     
+      <label for="name">Amount</label>
+      <input type="number" name="" id="buydata">
+    
+
+        <button>Buy Data</button>
+    </div>
+</div>
+<div class="modal bill_modal">
+  <div class="bills">
+      <p>Budget planner by______</p>
+
+      <h3>Bills Payment</h3>
+
+      <label for="name">House Number</label>
+      <input type="tel" name="" id="withdraw">
+      <label for="network"> Network  </label> 
+        <select name="border" id="">
+          <option value="Electricity Bill">Electricity Bill</option>
+          <option value="Water Bill">Water Bill</option>
+          <option value="Waste Bill">Waste Bill</option>
+          <option value="Tax">Tax</option>
+        </select>
+     
+      <label for="name">Amount</label>
+      <input type="number" name="" id="bills">
+
+      <button >Proceed Payment</button>
+  </div>
+</div>
+<div class="modal exam_modal">
+  <div class="schoolexam">
+      <p>Budget planner by______</p>
+
+      <h3>School</h3>
+
+      <label for="name">Candidate Number</label>
+      <input type="tel text" name="" id="withdraw">
+      <label for="network"> Exam Type </label> 
+        <select name="border" id="">
+          <option value="Jamb">Jamb</option>
+          <option value="Waec">Waec</option>
+          <option value="GCE">GCE</option>
+          <option value="NEC0">NEC0</option>
+        </select>
+     
+      <label for="name">Amount</label>
+      <input type="number" name="" id="school">
+      <button >Proceed Payment</button>
+  </div>
+</div>
+<div class="modal shop_modal">
+  <div class="Shopping">
+      <p>Budget planner by______</p>
+
+      <h3>Shopping</h3>
+      <label for="name">Package Number</label>
+      <input type="tel text" name="" id="withdraw">
+      <label for="network"> Exam Type </label> 
+        <select name="border" id="">
+          <option value="Jumia">Jumia</option>
+          <option value="Amazon">Amazon</option>
+          <option value="konga">konga</option>
+          <option value="Alibaba">Alibaba</option>
+        </select>
+     
+      <label for="name">Amount</label>
+      <input type="number" name="" id="shopping">
+
+      <button >Proceed Payment</button>
+  </div>
+</div>
+
+  <div class="modal Insufficient_modal">
+      <div class="Insufficient">
+        <i  class="fa-notdog-duo fa-solid fa-xmark"></i>
+          <p>Budget planner by______</p>
+
+          <h3 style="text-align: center;">Insufficient funds </h3>
+          <h3 style="text-align: center;">TRY AGAIN</h3>
+
+      </div>
+  </div>
+</body>
+</html>
