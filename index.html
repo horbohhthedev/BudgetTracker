@@ -20,16 +20,16 @@
     <div class="maindash">
       <h4>Available Balance</h4>
       <h2 class="display_balance">₦0.00</h2>
-      <button >Deposit</button> <button >Withdraw</button>
+      <button onclick="openDeposit()" >Deposit</button> <button onclick="openWithdraw()" >Withdraw</button>
      <div class="trans_summary"> <span id="total_in">IN: ₦0.00</span> <span id="total_out">OUT: ₦0.00 </span> </div>
     </div>
 
-    <div class="Services" >Buy Airtime</div>
-    <div class="Services" >Purchase Data</div>
-    <div class="Services" >Bills and Utility</div>
-    <div class="Services" >Products and Services</div>
-    <div class="Services" >School and Exams</div>
-    <div class="Services" >Shopping</div>
+    <div class="Services" onclick="openBuyAirtime()" >Buy Airtime</div>
+    <div class="Services" onclick="openData()">Purchase Data</div>
+    <div class="Services" onclick="openBill()">Bills and Utility</div>
+    <div class="Services" onclick="">Products and Services</div>
+    <div class="Services" onclick="openExam()">School and Exams</div>
+    <div class="Services" onclick="openShop()">Shopping</div>
 
     </div>
 
@@ -58,9 +58,9 @@
           <label for="name">Name</label>
           <input type="text" name="" id="welcome_name">
           <label for="name">Starting Balance</label>
-          <input type="text" name="" id="stbal">
+          <input type="text" name="" id="stbal" required>
 
-          <button id="login_button">Login</button>
+          <button id="login_button" onclick="magic()">Login</button>
       </div>
   </div>
   <div class="modal deposit_modal">
@@ -74,7 +74,7 @@
           <label for="name">Narration</label>
           <input type="text" name="" id="">
 
-          <button>Deposit</button>
+          <button onclick="deposit()">Deposit</button>
       </div>
   </div>
   <div class="modal withdraw_modal">
@@ -88,7 +88,7 @@
           <label for="name">Narration</label>
           <input type="text" name="" id="">
 
-          <button>Withdraw</button>
+          <button onclick="withdraw()">Withdraw</button>
       </div>
   </div>
   <div class="modal airtime_modal">
@@ -111,7 +111,7 @@
           <input type="number" name="" id="buyairtime">
         
 
-          <button>Buy Airtime</button>
+          <button onclick="airtime()">Buy Airtime</button>
       </div>
   </div>
   <div class="modal data_modal">
@@ -133,7 +133,7 @@
       <input type="number" name="" id="buydata">
     
 
-        <button>Buy Data</button>
+        <button onclick="dataPurchase()">Buy Data</button>
     </div>
 </div>
 <div class="modal bill_modal">
@@ -155,7 +155,7 @@
       <label for="name">Amount</label>
       <input type="number" name="" id="bills">
 
-      <button >Proceed Payment</button>
+      <button onclick="bills()">Proceed Payment</button>
   </div>
 </div>
 <div class="modal exam_modal">
@@ -176,7 +176,7 @@
      
       <label for="name">Amount</label>
       <input type="number" name="" id="school">
-      <button >Proceed Payment</button>
+      <button onclick="school()" >Proceed Payment</button>
   </div>
 </div>
 <div class="modal shop_modal">
@@ -197,13 +197,13 @@
       <label for="name">Amount</label>
       <input type="number" name="" id="shopping">
 
-      <button >Proceed Payment</button>
+      <button onclick="shopping()" >Proceed Payment</button>
   </div>
 </div>
 
   <div class="modal Insufficient_modal">
       <div class="Insufficient">
-        <i  class="fa-notdog-duo fa-solid fa-xmark"></i>
+        <i onclick="closeInsufficient()" class="fa-notdog-duo fa-solid fa-xmark"></i>
           <p>Budget planner by______</p>
 
           <h3 style="text-align: center;">Insufficient funds </h3>
